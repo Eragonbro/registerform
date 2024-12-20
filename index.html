@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="utf-8" />
+        <meta name="Register form" content="Now, we do Register form" />
+        <title> Register form example</title>
+        <link rel="stylesheet" href="style.css" />
+  </head>
+
+    <body>
+        <main>
+            
+
+            <form action="/submit-form" method="post" id="multiStepForm">
+                
+                <!-- Step 1: name and email-->
+                <div class="step active" id="step1">
+                    
+                    <h2>Register</h2>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+
+                    <button type="button" id="nextStep1">Next</button>
+                </div>
+
+                <!-- Step 2: topics-->
+                <div class="step" id="step2">
+                    
+                    <h2>Which topics are you interested in?</h2>
+
+                    <div class="topicContainer">
+                        <div class="topic" data-value="softwareDesign">Software Development</div>
+                        <div class="topic" data-value="userExperience">User Experience</div>
+                        <div class="topic" data-value="graphicDesign">Graphic Design</div>
+                    </div>
+                    
+                    <button type="button" id="backStep2">Back</button>
+                    <button type="button" id="nextStep2">Continue</button>
+                </div>
+
+                <!-- Step 3: recap and confirm-->
+                <div class="step" id="step3">
+                    <h2>Summary</h2>
+
+                    <p><strong>Name:</strong> <span id="recapName"></span></p>
+                    <p><strong>Email:</strong> <span id="recapEmail"></span></p>
+                    <p><strong>Selected Topics:</strong> <span id="recapTopics"></span></p>
+                    
+                    <button type="button" id="backStep3">Back</button>
+                    <button type="submit" id="confirmStep3">Confirm</button>
+                </div
+
+            </form>
+
+        </main>
+        
+
+        </div>
+    </body>
+    
+</html>
