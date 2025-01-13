@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+.inpt {
+    @apply block mt-2 h-12 bg-transparent border-design-background-input border-0.2 rounded-lg px-3 text-xs w-full 
+}
+
+.btn {
+    @apply self-center inline-block mt-8 px-8 rounded-3xl bg-gradient-to-b from-violet-500 to-violet-800  py-2  text-xs font-semibold hover:-translate-y-0.5  hover:from-violet-500 hover:to-violet-600
+}
+
+.topic {
+    @apply flex flex-col justify-center block h-12 bg-transparent border-design-background-input border-0.2 rounded-lg px-3 text-xs w-full 
+}
+
+@tailwind utilities;

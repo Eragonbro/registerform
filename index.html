@@ -5,58 +5,105 @@
         <meta charset="utf-8" />
         <meta name="Register form" content="Now, we do Register form" />
         <title> Register form example</title>
-        <link rel="stylesheet" href="style.css" />
+        <link href="output.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
 
-    <body>
-        <main>
+    <body class="bg-blend-color-dodge bg-design-background-black  text-design-background-white font-inter ">
+        <div class="absolute z-0">
+            <svg width="749" height="749" viewBox="0 0 749 749" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="374.5" cy="374.5" r="374.5" fill="url(#paint0_radial_779_2273)" fill-opacity="0.3"/>
+                <defs>
+                <radialGradient id="paint0_radial_779_2273" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(374.5 374.5) rotate(90) scale(374.5)">
+                <stop stop-color="#652CD1"/>
+                <stop offset="1" stop-color="#652CD1" stop-opacity="0"/>
+                </radialGradient>
+                </defs>
+                </svg>
+        </div>
+        <main class="flex items-center justify-center h-lvh border-2 ">
             
-            <div class="container">
+            <div class=" relative z-10 w-[480px]   px-12 py-8 h-fit bg-design-background-gray rounded-xl" id="container">
             <form action="/submit-form" method="post" id="multiStepForm">
                 
                 <!-- Step 1: name and email-->
                 
-                    <div class="step active" id="step1">
+                    <div class="step active flex flex-col " id="step1">
                         
-                        <h2>Register</h2>
+                        <h2 class="text-lg ">Register</h2>
 
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <br><br>
+                        <label class="block mt-8" for="name">Name</label>
+                        <input class="inpt" type="text" id="name" name="name" placeholder="Enter your name" required>
+                        
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        <br><br>
+                        <label class="block mt-8 " for="email">Email</label>
+                        <input class="inpt" type="email" id="email" name="email" placeholder="Example@gmail.com" required>
+                        
 
-                        <button type="button" id="nextStep1">Next</button>
+                        <button class="btn " type="button" id="btnNext1">Continue</button>
                     </div>
                 
 
                 <!-- Step 2: topics-->
-                <div class="step" id="step2">
+                <div class="step hidden" id="step2">
                     
-                    <h2>Which topics are you interested in?</h2>
+                    <h2 class="text-lg ">Which topics are you interested in?</h2>
 
-                    <div class="topicContainer">
-                        <div class="topic" data-value="softwareDesign">Software Development</div>
-                        <div class="topic" data-value="userExperience">User Experience</div>
-                        <div class="topic" data-value="graphicDesign">Graphic Design</div>
+                    <div class="space-y-6 mt-8" id="topicContainer">
+                        
+                        <div>
+                            <label class="topic" for="sd">
+                                Software Development
+                            </label>
+                            <input class="hidden" type="checkbox" id="sd" data-value="Software Development">
+    
+                        </div>
+
+                        <div>
+                            <label class="topic" for="ue">
+                                User Experience
+                            </label>
+                            <input class="hidden" type="checkbox" id="ue" data-value="User Experience">
+    
+                        </div>
+
+                        <div>
+                            <label class="topic" for="gd">
+                                Graphic Design
+                            </label>
+                            <input class="hidden" type="checkbox" id="gd" data-value="Graphic Design">
+    
+                        </div>
+                        
+                    
                     </div>
                     
-                    <button type="button" id="backStep2">Back</button>
-                    <button type="button" id="nextStep2">Continue</button>
-                </div>
+                    <div class="flex justify-center "> 
+                        
+                        <button class="btn" type="button" id="btnNext2">Continue</button>
+                
+                    </div>
+                    </div>
 
                 <!-- Step 3: recap and confirm-->
-                <div class="step" id="step3">
-                    <h2>Summary</h2>
+                <div class="step hidden" id="step3">
+                    <h2 class="text-lg">Summary</h2>
 
-                    <p><strong>Name:</strong> <span id="recapName"></span></p>
-                    <p><strong>Email:</strong> <span id="recapEmail"></span></p>
-                    <p><strong>Selected Topics:</strong> <span id="recapTopics"></span></p>
+                    <div class="mt-8">
+                    <p><span class="text-gray-400">Name:</span> <span class="font-semibold" id="recapName">Emily Johnson</span></p>
+                    <p class="mt-2 "><span class="text-gray-400">Email:</span> <span class="font-semibold" id="recapEmail">emily@emilyjohnsonstl.com</span></p>
+                    <p class="mt-8"><span class="text-gray-400">Selected Topics: <br></span> <span id="recapTopics"> <ul class="list-disc pl-6 mt-1 "> <li>User Experience</li> <li>Graphic Design</li></ul></span></p>
                     
-                    <button type="button" id="backStep3">Back</button>
-                    <button type="submit" id="confirmStep3">Confirm</button>
+                    <div class="flex justify-center "> 
+                        
+                        <button class="btn" type="submit" id="btnSubmit">Continue</button>
+                    </div>
+                
+                   
+                    
                 </div
 
             </form>
@@ -64,8 +111,8 @@
         
         </main>
         
-
-        </div>
+    <script src="javascript.js"></script>
+    
     </body>
     
 </html>
